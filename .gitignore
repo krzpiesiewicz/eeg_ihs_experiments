@@ -1,3 +1,12 @@
+data
+!data/eeg_features_raw.csv
+html
+old_notebooks
+pracamgr_4
+pracamgr_4.zip
+thesis_0.0.1
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

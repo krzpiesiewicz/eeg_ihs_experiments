@@ -19,8 +19,14 @@ methods_descrs = {
 
 
 def ar_coeffs(x, p, method):
-    pacf_values = pacf(x, method=method, nlags=p)
-    ar_coeffs, _ = ar_from_pacf(pacf_values, nlags=p)
+    if method == ols:
+        xlags, x0 = lagmat(x, p, original="sep", trim="both")
+        xlags = add_constant(xlags)
+        params = lstsq(xlags[p:, : p + 1], x0[p:], rcond=None)[0]
+        ar_coeffs = params[1:]
+    else:
+        pacf_values = pacf(x, method=method, nlags=p)
+        ar_coeffs, _ = ar_from_pacf(pacf_values, nlags=p)
     return ar_coeffs
 
 

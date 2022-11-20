@@ -2,6 +2,10 @@ import numpy as np
 import pandas as pd
 
 from statsmodels.tsa.stattools import levinson_durbin_pacf as ar_from_pacf
+from statsmodels.tsa.tsatools import lagmat
+from statsmodels.tools.tools import add_constant
+
+from statsmodels.compat.numpy import lstsq
 
 from timeseries.analysis import acf, pacf
 

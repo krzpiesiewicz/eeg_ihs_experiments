@@ -28,6 +28,7 @@ def knn_scores(
     classes,
     eval_idx="all",
     n=[i for i in range(3, 7)],
+    train_size=0.7,
     cv=10,
     cv_random_state=42,
     model_random_state=42,
@@ -146,8 +147,12 @@ def knn_scores(
                                 np.arange(0, len(y)),
                                 y,
                                 random_state=model_random_state,
-                                train_size=0.7,
+                                train_size=train_size,
                             )
+#                             df = pd.DataFrame({"class": y.iloc[train_idx]})
+#                             df["i"] = 1
+#                             print(df.groupby("class").count())
+#                             print(f"train_idx: {len(train_idx)}, test_idx: {len(test_idx)}")
                             train_eval_add_scores(
                                 train_idx, test_idx, model_random_state
                             )

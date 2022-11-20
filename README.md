@@ -1,3 +1,6 @@
 # eeg_ihs_experiments
 
-the generated htmls: [https://students.mimuw.edu.pl/~kp385996/ba/ba-thesis/ar/html/](https://students.mimuw.edu.pl/~kp385996/ba/ba-thesis/ar/html/)
+Experiments for [my BA thesis](https://students.mimuw.edu.pl/~kp385996/theses/1000-LIC-MAT-322714.pdf).
+
+The generated [htmls](https://students.mimuw.edu.pl/~kp385996/ba/ba-thesis/ar/html/).
+
